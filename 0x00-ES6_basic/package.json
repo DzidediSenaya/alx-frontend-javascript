@@ -1,0 +1,20 @@
+{
+  "name": "es6-basics",
+  "version": "1.0.0",
+  "description": "Package for ES6 basics",
+  "repository": "https://github.com/DzidediSenaya/es6-basics",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src -d dist",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-jest": "^27.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.25.0",
+    "jest": "^27.0.0"
+  }
+}
