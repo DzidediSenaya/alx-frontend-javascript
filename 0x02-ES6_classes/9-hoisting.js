@@ -1,47 +1,35 @@
 export class HolbertonClass {
   constructor(year, location) {
-    this.year = year;
-    this.location = location;
+    this._year = year;
+    this._location = location;
   }
 
   get year() {
     return this._year;
   }
 
-  set year(value) {
-    this._year = value;
-  }
-
   get location() {
     return this._location;
-  }
-
-  set location(value) {
-    this._location = value;
   }
 }
 
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.holbertonClass = holbertonClass;
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._holbertonClass = holbertonClass;
   }
 
   get fullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this._firstName} ${this._lastName}`;
   }
 
   get holbertonClass() {
     return this._holbertonClass;
   }
 
-  set holbertonClass(value) {
-    this._holbertonClass = value;
-  }
-
   get fullStudentDescription() {
-    return `${this.firstName} ${this.lastName} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
   }
 }
 
@@ -54,4 +42,5 @@ const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
 const student4 = new StudentHolberton('Donald', 'Bush', class2019);
 const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
 
-export const listOfStudents = [student1, student2, student3, student4, student5];
+const listOfStudents = [student1, student2, student3, student4, student5];
+export default listOfStudents;
