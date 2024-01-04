@@ -1,37 +1,47 @@
-// 9-hoisting.js
-
 export class HolbertonClass {
   constructor(year, location) {
-    this._year = year;
-    this._location = location;
+    this.year = year;
+    this.location = location;
   }
 
   get year() {
     return this._year;
   }
 
+  set year(value) {
+    this._year = value;
+  }
+
   get location() {
     return this._location;
+  }
+
+  set location(value) {
+    this._location = value;
   }
 }
 
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._holbertonClass = holbertonClass;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.holbertonClass = holbertonClass;
   }
 
   get fullName() {
-    return `${this._firstName} ${this._lastName}`;
+    return `${this.firstName} ${this.lastName}`;
   }
 
   get holbertonClass() {
     return this._holbertonClass;
   }
 
+  set holbertonClass(value) {
+    this._holbertonClass = value;
+  }
+
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    return `${this.firstName} ${this.lastName} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
   }
 }
 
