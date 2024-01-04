@@ -2,12 +2,12 @@ export default function taskBlock(trueOrFalse) {
   const task = false;
   const task2 = true;
 
-  /* eslint-disable no-unused-vars */
   if (trueOrFalse) {
-    const innerTask = true;
-    const innerTask2 = false;
+    // You don't need to declare innerTask and innerTask2 here
+    // if you're not using them outside this block
+    // const innerTask = true;
+    // const innerTask2 = false;
   }
-  /* eslint-enable no-unused-vars */
 
   return [task, task2];
 }
