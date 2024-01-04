@@ -3,10 +3,10 @@ export default function taskBlock(trueOrFalse) {
   let task2 = true;
 
   if (trueOrFalse) {
-    let task = true; // Use let for block-scoping
-    const task2 = false; // Use const for block-scoping
+    // Remove the 'var' declarations inside the conditional block
+    task = true;
+    task2 = false;
   }
 
   return [task, task2];
 }
-
