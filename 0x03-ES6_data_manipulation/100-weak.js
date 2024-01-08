@@ -1,15 +1,15 @@
-const weakMap = new WeakMap();
+import { queryAPI, weakMap } from "./100-weak.js";
 
-function queryAPI(endpoint) {
-  if (!weakMap.has(endpoint)) {
-    weakMap.set(endpoint, 1);
-  } else {
-    const count = weakMap.get(endpoint);
-    if (count >= 5) {
-      throw new Error('Endpoint load is high');
-    }
-    weakMap.set(endpoint, count + 1);
-  }
-}
+const endpoint = { protocol: 'http', name: 'getUsers' };
+weakMap.get(endpoint);
 
-export { queryAPI, weakMap };
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
