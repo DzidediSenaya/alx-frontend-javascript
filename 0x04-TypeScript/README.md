@@ -31,6 +31,9 @@ Task 8: Ambient Namespaces
 Task 9: Namespace & Declaration merging
 Task 10: Update task_4/js/main.ts
 Task 11: Brand convention & Nominal typing
+
+
+Tasks
 Task 0: Creating an interface for a student <a name="task-0"></a>
 In this task, we create an interface named Student and render a table with student information.
 
